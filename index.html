@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EncryptDecryptify</title>
+    <!-- Include Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include Roboto font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Include Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- External CSS -->
+  </head>
+  <body
+    class="bg-purple-50 font-roboto transition-colors duration-500 flex items-center justify-center min-h-screen"
+  >
+    <div class="w-full max-w-md p-4">
+      <!-- Header Section -->
+      <div class="flex justify-between items-center mb-4">
+        <img
+          alt="Logo"
+          class="h-10 w-auto"
+          height="50"
+          src="https://storage.googleapis.com/a1aa/image/2w5RIJXeg8wlUC6ReDcPtNqvPRGkwcee9ez8GUUrC1cfYYSfJA.jpg"
+          width="200"
+        />
+        <button class="action-button" id="themeToggle">Toggle Dark Mode</button>
+      </div>
+
+      <!-- Encryption/Decryption Form -->
+      <div
+        class="bg-white shadow-md rounded-lg p-6 transition-colors duration-500"
+      >
+        <h1 class="text-2xl font-bold mb-4 text-center text-blue-700">
+          EncryptDecryptify
+        </h1>
+
+        <!-- Method Selection Buttons -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <button class="method-button" data-method="aes">AES</button>
+          <button class="method-button" data-method="rsa">RSA</button>
+          <button class="method-button" data-method="des">DES</button>
+          <button class="method-button" data-method="blowfish">Blowfish</button>
+          <button class="method-button" data-method="twofish">Twofish</button>
+          <button class="method-button" data-method="rc4">RC4</button>
+          <button class="method-button" data-method="chacha20">ChaCha20</button>
+          <button class="method-button" data-method="base64">Base64</button>
+          <button class="method-button" data-method="xor">XOR</button>
+          <button class="method-button" data-method="vigenere">Vigenère</button>
+        </div>
+
+        <!-- Action Buttons (Encrypt/Decrypt) -->
+        <div class="flex justify-center mb-4">
+          <button class="action-button" id="encryptOption">Encrypt</button>
+          <button class="action-button" id="decryptOption">Decrypt</button>
+        </div>
+
+        <!-- Key and Input Fields -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="encryptionKey"
+            >Enter Encryption Key:</label
+          >
+          <input class="input-box" id="encryptionKey" type="text" />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="textInput"
+            >Enter Text to Encrypt/Decrypt:</label
+          >
+          <textarea class="input-box" id="textInput" rows="4"></textarea>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-bold mb-2" for="output"
+            >Result will appear here:</label
+          >
+          <textarea class="input-box" id="output" readonly rows="4"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button class="submit-button" id="actionBtn">Encrypt Text</button>
+        </div>
+      </div>
+
+      <!-- Information Section -->
+      <div class="bg-white shadow-md rounded-lg p-6 mt-6">
+        <h2 class="text-xl font-bold mb-4 text-center text-blue-700">
+          Encryption and Decryption Methodologies
+        </h2>
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>AES (Advanced Encryption Standard)</strong>: This is the
+            standard encryption method used by the U.S. government and is widely
+            adopted globally for securing sensitive data. It uses a symmetric
+            key and supports key sizes of 128, 192, and 256 bits.
+          </li>
+          <li>
+            <strong>RSA (Rivest-Shamir-Adleman)</strong>: One of the first
+            public-key cryptosystems, RSA is extensively used for secure data
+            transmission and digital signatures. It relies on the difficulty of
+            factoring large prime numbers to ensure security.
+          </li>
+          <li>
+            <strong>Blowfish</strong>: While not as commonly used today as AES,
+            Blowfish was popular in the 1990s. It is recognized for its speed
+            and effectiveness in applications like password hashing and secure
+            file transfers.
+          </li>
+          <li>
+            <strong>Twofish</strong>: This algorithm was a finalist in the AES
+            competition. Known for its flexibility and speed, Twofish provides
+            high levels of security and is still used in some legacy systems.
+          </li>
+          <li>
+            <strong>ECC (Elliptic Curve Cryptography)</strong>: ECC is gaining
+            popularity due to its efficiency and strong security. With smaller
+            key sizes compared to RSA, ECC is ideal for mobile and embedded
+            systems where computational resources are limited.
+          </li>
+          <li>
+            <strong>ChaCha20</strong>: A modern stream cipher known for its
+            exceptional performance and security. It is widely used in mobile
+            applications and internet protocols like TLS for secure
+            communication.
+          </li>
+          <li>
+            <strong>Salsa20</strong>: A predecessor to ChaCha20, Salsa20 is a
+            fast and secure stream cipher. While effective, ChaCha20 has largely
+            replaced it in modern cryptographic applications.
+          </li>
+          <li>
+            <strong>Homomorphic Encryption</strong>: This cutting-edge technique
+            allows computations to be performed on encrypted data without
+            decrypting it first. It is particularly promising for
+            privacy-preserving operations in cloud computing and AI.
+          </li>
+          <li>
+            <strong>Post-Quantum Cryptography</strong>: With the rise of quantum
+            computing, traditional encryption methods could be compromised.
+            Post-quantum algorithms are being developed to resist quantum-based
+            attacks and future-proof cryptographic systems.
+          </li>
+          <li>
+            <strong>Quantum Key Distribution (QKD)</strong>: Leveraging the
+            principles of quantum mechanics, QKD provides an ultra-secure method
+            for key exchange. It is a rapidly advancing field aimed at ensuring
+            communication channels remain secure against all potential threats.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-gray-800 mt-6 text-center">
+  <p class="text-lg font-semibold">
+    Thanks For Using EncryptDecryptify. It's made with Love
+    <span class="text-red-500 font-bold">♥</span> in India
+    <span class="text-green-500 font-bold">🇮🇳</span>
+  </p>
+  <p class="text-lg font-semibold mt-2">
+    Connect Developer on
+    <a class="text-blue-500 hover:underline" href="https://github.com/Priyanshu-rajsingh" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a class="text-blue-700 hover:underline" href="https://www.linkedin.com/in/priyanshu-raj-singh-09067928b/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </p>
+</div>
+
+    <script src="script.js"></script>
+    <!-- External JavaScript -->
+  </body>
+</html>

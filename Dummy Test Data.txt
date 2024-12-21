@@ -1,0 +1,14 @@
+Here’s a table of buffer test data with plaintext, keys, and expected results for encryption/decryption. You can use these test cases for validating different encryption/decryption techniques.
+
+Method	  Plaintext	Key	Expected Encrypted Output	Expected Decrypted Output
+
+AES	      HelloWorld	MyAESKey	Encrypted (mock, depends on lib)	HelloWorld
+RSA	      HelloRSA	  MyRSAKey	Encrypted (mock, depends on lib)	  HelloRSA
+DES	      TestDES	    MyDESKey	Encrypted (mock, depends on lib)	    TestDES
+Blowfish	BlowfishTest	BlowKey	Encrypted (mock, depends on lib)	BlowfishTest
+Twofish	  TwofishData	TwoKey	Encrypted (mock, depends on lib)	  TwofishData
+RC4	      RC4Message	RC4Key	Encrypted (mock, depends on lib)	  RC4Message
+ChaCha20	ChaChaData	ChaChaKey	Encrypted (mock, depends on lib)	ChaChaData
+Base64	  Base64String	None	QmFzZTY0U3RyaW5n	                  Base64String
+XOR	      XORData	    XORKey	Encrypted XOR (binary result)	          XORData
+Vigenère	VigenereCipher	VigenereKey	Encrypted(character shifts) VigenereCipher
