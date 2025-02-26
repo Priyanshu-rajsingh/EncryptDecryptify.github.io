@@ -6,7 +6,7 @@ Welcome to EncryptDecryptify, your one-stop solution for robust and versatile en
 [images/screenshot.png](Encrypt.png)
 
 📑 **Project Presentation:** 
-[docs/presentation.pdf](AICTE x IBM-INTERN-PROJECT-PPT.pptx)
+[pptx/presentation.pptx](AICTE x IBM-INTERN-PROJECT-PPT.pptx)
 
 ## 🌟 Features
 
