@@ -2,6 +2,11 @@
 
 Welcome to EncryptDecryptify, your one-stop solution for robust and versatile encryption and decryption! 🚀 This project implements a wide range of cryptographic algorithms, catering to various security needs.
 
+* 🖼️ **Preview:**
+* [images/screenshot.png](Encrypt.png)
+
+📑 **Project Presentation:** [Project Slides](AICTE x IBM-INTERN-PROJECT-PPT.pptx)
+
 ## 🌟 Features
 
 * **Diverse Algorithm Support:** 🛡️ Implements leading encryption standards including:
